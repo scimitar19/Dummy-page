@@ -2,6 +2,10 @@ import Navigation from "./components/Navigation.jsx";
 import Plans from "./components/Plans.jsx";
 import styles from "./App.module.css";
 
+
+
+const PLANS = [{title: "FREE", price: "$0/month", description: "For hobby projects or small treams", styling: "plan__features", workspave: "1 Workspace", traffic: "Unlimitted Traffic", storage: "10GB Storage", support: "Basic Support"}]
+
 const Body = () => {
   return (
     <main>

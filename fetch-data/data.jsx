@@ -1,0 +1,33 @@
+export const PLANS = [
+  {
+    title: "FREE",
+    price: "$0/month",
+    description: "For hobby projects or small treams",
+    styling: { article: "plan", ul: "plan__features" },
+    workspave: "1 Workspace",
+    traffic: "Unlimitted Traffic",
+    storage: "10GB Storage",
+    support: "Basic Support",
+  },
+  {
+    title: "RECOMMENDED",
+    ADD: "PLUS",
+    price: "$29/month",
+    description: "For ambitious projects",
+    styling: { article: "plan", ul: "plan__features", h1: "plan__annotation" },
+    workspave: "1 Workspace",
+    traffic: "Unlimitted Traffic",
+    storage: "10GB Storage",
+    support: "Basic Support",
+  },
+  {
+    title: "PREMIUM",
+    price: "$99/month",
+    description: "Your enterprise solution",
+    styling: { article: "plan", ul: "plan__features" },
+    workspave: "10 Workspaces",
+    traffic: "Unlimitted Traffic",
+    storage: "Unlimitted Storage",
+    support: "Priority Support",
+  },
+];
