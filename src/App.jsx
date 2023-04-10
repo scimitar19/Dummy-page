@@ -1,10 +1,7 @@
 import Navigation from "./components/Navigation.jsx";
 import Plans from "./components/Plans.jsx";
+import Features from "./components/Features.jsx";
 import styles from "./App.module.css";
-
-
-
-const PLANS = [{title: "FREE", price: "$0/month", description: "For hobby projects or small treams", styling: "plan__features", workspave: "1 Workspace", traffic: "Unlimitted Traffic", storage: "10GB Storage", support: "Basic Support"}]
 
 const Body = () => {
   return (
@@ -14,8 +11,9 @@ const Body = () => {
       </section>
       <section id={styles.plans}>
         <h1 className={styles["section-title"]}>Choose your plan</h1>
-      <Plans />
+        <Plans />
       </section>
+      <Features/>
     </main>
   );
 };
@@ -23,7 +21,7 @@ const Body = () => {
 function App() {
   return (
     <div>
-      <Navigation/>
+      <Navigation />
       <Body />
     </div>
   );
