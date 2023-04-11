@@ -1,5 +1,6 @@
-import PlanItem from "./plan/PlanItem.jsx";
+import PlanItem from "../components/plan/PlanItem.jsx";
 import { PLANS } from "../fetch-data/data.jsx";
+
 const Plans = () => {
   return PLANS.map((item) => {
     return (

@@ -9,7 +9,7 @@
     vertical-align: middle;
 }
 
-.main-header__brands {
+.main-header__brands a{
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
