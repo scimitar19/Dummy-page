@@ -1,7 +1,11 @@
 .main-header {
     width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
     background-color: #22df5c;
     padding: 8px 16px;
+    z-index: 1;
 }
 
 .main-header > div {
@@ -9,11 +13,17 @@
     vertical-align: middle;
 }
 
-.main-header__brands a{
+.main-header__brands {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
+    height: 22px;
+    display: inline-block;
+}
+
+.main-header__brands img {
+    height: 100%;
 }
 
 .main-nav {

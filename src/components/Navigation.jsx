@@ -1,12 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Logo from "../images/uhost-icon.png";
 import styles from "./Navigation.module.css";
 
 const Navigation = () => {
   return (
     <header className={styles["main-header"]}>
       <div>
-        <a className={styles["main-header__brands"]}><Link to="/">uHost</Link></a>
+        <Link className={styles["main-header__brands"]} to="/"><img src={Logo} alt="Uhost Icon"/></Link>
       </div> 
       <nav className={styles["main-nav"]}>
         <ul className={styles["main-nav__items"]}>

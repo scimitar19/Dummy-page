@@ -1,5 +1,6 @@
 import Home from "./main-page/Home.jsx";
 import PackagesPage from "./package-page/PackagesPage.jsx";
+import CustomersPage from "./customers-page/CustomersPage.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -8,9 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/packages" element={<PackagesPage/>} />
+        <Route path="/customers" element={<CustomersPage/>}/>
       </Routes>
-      {/* {!<Navigation />} */}
-      {/* {!<Body />} */}
     </BrowserRouter>
   );
 }

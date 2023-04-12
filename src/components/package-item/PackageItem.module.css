@@ -21,13 +21,25 @@
     padding: 32px;
 }
 
+.package__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 12px !important;
+    color: white !important;
+    background: #ff5454;
+    padding: 8px;
+    /* rotate: 45deg; */
+}
+
 .package-item > a > h1 {
     padding: 16px;
     color: black;
     font-size: 20px;
 }
 
-.package-item > a > h2 {
+.package-item a h2 {
     color: #979797;
     font-size: 20px;
 }
@@ -44,6 +56,7 @@
 
 #plus {
     background: rgba(213, 255, 220, 0.95);
+    position: relative;
 }
 
 #free {
