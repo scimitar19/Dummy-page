@@ -1,5 +1,9 @@
 import Customer1 from "../images/customer-1.jpg";
 import Customer2 from "../images/customer-2.jpg";
+import {ReactComponent as ReactLogo1} from "../images/svg/svg1.svg";
+import {ReactComponent as ReactLogo2} from "../images/svg/svg2.svg";
+import {ReactComponent as ReactLogo3} from "../images/svg/svg3.svg";
+
 
 export const PLANS = [
   {
@@ -42,9 +46,9 @@ export const PLANS = [
 ];
 
 export const FEATURES = [
-  "3,857,000 Trusting Customers",
-  "99.999% Uptime Guarantee",
-  "Lightning Fast CDN",
+  {title: "3,857,000 Trusting Customers", svgImage: <ReactLogo1/>},
+  {title: "99.999% Uptime Guarantee", svgImage: <ReactLogo2/>},
+  {title: "Lightning Fast CDN", svgImage: <ReactLogo3/>},
 ];
 
 export const PACKAGE_DATA = [

@@ -2,11 +2,12 @@ import React from "react";
 import Navigation from "../components/Navigation.jsx";
 import CustomersList from "./CustomersList.jsx";
 import Footer from "../components/Footer.jsx";
-
+import Backdrop from "../components/backdrop/Backdrop.jsx";
 
 const CustomersPage = () => {
   return (
     <React.Fragment>
+      <Backdrop/>
       <Navigation />
       <CustomersList/>
       <Footer />
