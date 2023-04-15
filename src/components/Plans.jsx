@@ -4,6 +4,7 @@ const Plans = () => {
   return PLANS.map((item) => {
     return (
       <PlanItem
+        key={Math.random().toString()}
         h1={item.styling.h1}
         h2={item.styling.h2}
         title={item.title}

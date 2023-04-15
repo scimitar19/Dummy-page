@@ -1,11 +1,11 @@
 .package-item {
     width: 80%;
-    margin: 20px 0px;
+    margin: 1rem 0px;
     border: 4px solid #0e4f1f;
-    height: 260px;
     background: #0db84660;
     font-family: sans-serif;
     border-left: none;
+    position: relative;
 }
 
 .package-item:hover,
@@ -18,19 +18,18 @@
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 32px;
+    padding: 2rem;
 }
 
 .package__badge {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 20px;
-    font-size: 12px !important;
+    margin: 1.2rem;
+    font-size: 0.8rem !important;
     color: white !important;
     background: #ff5454;
-    padding: 8px;
-    /* rotate: 45deg; */
+    padding: 0.5rem;
 }
 
 .package-item > a > h1 {
@@ -45,12 +44,11 @@
 }
 
 .package-item > a > p {
-    padding: 16px;
+    padding: 1rem;
     width: 85%;
     height: auto;
     background: white;
-    color: black;
-    font-size: 16px;
+    font-size: 1.2rem;
     border: 1px solid #0e4f1f;
 }
 

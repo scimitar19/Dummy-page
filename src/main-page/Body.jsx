@@ -2,8 +2,10 @@ import Plans from "./Plans.jsx";
 import Features from "./Features.jsx";
 import styles from "../App.module.css";
 
-const Body = () => {
-    
+const Body = ({homeFn}) => {
+      const callBodyHandler = () => {
+        homeFn();
+      }
         return (
           <main>
             <section id={styles["product-overview"]}>
@@ -12,7 +14,7 @@ const Body = () => {
             <section id={styles.plans}>
               <h1 className={styles["section-title"]}>Choose your plan</h1>
               <div className={styles["plan-list"]}>
-              <Plans/>
+              <Plans bodyFn={callBodyHandler}/>
               </div>
             </section>
             <Features/>

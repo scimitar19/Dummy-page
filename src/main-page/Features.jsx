@@ -8,7 +8,7 @@ const Features = () => {
         <h1 className={`${styles["section-title"]} ${styles1["section-title"]}`}>Many Good Reasons to Stick Around</h1>
         <ul className={styles1["key-feature__list"]}>
              {FEATURES.map(value => {
-                return <Feature title={value.title} svgImage={value.svgImage}></Feature>
+                return <Feature title={value.title} svgImage={value.svgImage} id={Math.random().toString()}></Feature>
              })}
         </ul>
     </section>)

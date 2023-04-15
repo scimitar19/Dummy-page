@@ -12,13 +12,13 @@ const Navigation = () => {
       <nav className={styles["main-nav"]}>
         <ul className={styles["main-nav__items"]}>
           <li className={styles["main-nav__item"]}>
-            <a><Link to="/packages">Packages</Link></a>
+            <Link to="/packages">Packages</Link>
           </li>
           <li className={styles["main-nav__item"]}>
-            <a><Link to="/customers">Customers</Link></a>
+            <Link to="/customers">Customers</Link>
           </li>
           <li className={`${styles["main-nav__item"]} ${styles["main-nav__item--cta"]}`}>
-            <a>Start Hosting</a>
+            <Link>Start Hosting</Link>
           </li>
         </ul>
       </nav>

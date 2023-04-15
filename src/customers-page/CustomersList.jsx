@@ -5,6 +5,7 @@ const CustomersList = () => {
   return CUSTOMERS_DATA.map((item) => {
     return (
       <CustomerItem
+        key={Math.random().toString()}
         h1={item.h1}
         h2={item.h2}
         p={item.p}

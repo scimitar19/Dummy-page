@@ -1,8 +1,7 @@
-import {ReactComponent as ReactLogo} from "../../images/svg/svg1.svg"
 
-const Feature = ({ title, svgImage }) => {
+const Feature = ({ title, svgImage, id }) => {
   return (
-    <li className="key-feature">
+    <li className="key-feature" id={id}>
       <div className="key-feature__image">
         {svgImage}
       </div>
