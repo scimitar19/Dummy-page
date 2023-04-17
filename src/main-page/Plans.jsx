@@ -1,7 +1,7 @@
 import PlanItem from "../components/plan/PlanItem.jsx";
 import { PLANS } from "../fetch-data/data.jsx";
 
-const Plans = ({bodyFn}) => {
+const Plans = ({bodyFn, onDispatch}) => {
   
   const callPlansHandler = () => {
        bodyFn();
@@ -23,6 +23,7 @@ const Plans = ({bodyFn}) => {
         traffic={item.traffic}
         storage={item.storage}
         support={item.support}
+        onDispatch={onDispatch}
       />
     );
   });

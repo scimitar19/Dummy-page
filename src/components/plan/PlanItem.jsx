@@ -1,9 +1,11 @@
-import styles from "../Plans.module.css"
+import styles from "./PlanItem.module.css"
 
 const ItemPlan = (props) => {
 
 const planHandler = () => {
     props.plansFn("Logeged from PLANS>JSX");
+    props.onDispatch({type: "showBackdrop"})
+    
 }
 
 return (<article className={props.plan1 ? `${styles[props.plan]} ${styles[props.plan1]}`: styles[props.plan]} key={props.key}>

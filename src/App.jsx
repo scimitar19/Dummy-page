@@ -2,49 +2,64 @@ import Home from "./main-page/Home.jsx";
 import PackagesPage from "./package-page/PackagesPage.jsx";
 import CustomersPage from "./customers-page/CustomersPage.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Backdrop from "./components/backdrop/Backdrop.jsx";
 import Modal from "./components/modal/Modal.jsx";
-import {useState} from "react";
-
+import { useState, useReducer } from "react";
+import Backdrop from "./components/backdrop/Backdrop.jsx";
 
 function App() {
-  
-  const [currentB, setBackdrop] = useState(false)
-  const [sizedBackdrop, setSizedB] = useState(true)
+  function reducerFn(state, action) {
+    console.log(state);
+    if (action.type == "removeBackdrop") {
+      return { ...state, visibleBackdrop: false };
+    } else if (action.type == "showBackdrop") {
+      return { ...state, visibleBackdrop: true}
+    } else {
+      return { ...state };
+    }
+  }
 
+  const [currentB, setBackdrop] = useState(false);
+  const [sizedBackdrop, setSizedB] = useState(true);
+  const [currState, dispatch] = useReducer(reducerFn, {
+    visibleBackdrop: false,
+    link: "#",
+  });
 
   const callAppHandler = () => {
-      setBackdrop((val) => {
-         return val = true;
-      });
-      setSizedB(true);
-      console.log("LOgged from App.jsx")
-  }
+    setBackdrop((val) => {
+      return (val = true);
+    });
+    setSizedB(true);
+    console.log(currState);
+  };
 
-  const someOther = () => {
-    setSizedB(false)
-    console.log("from appp")
-  }
- 
-  const buttonPrompt = () => {
-    setBackdrop(false)
-  }
+  // const backdropOff = () => {
+  //   setSizedB(false);
+  //   dispatch();
+  //   console.log("from appp");
+  // };
+
+  // const buttonPrompt = () => {
+  //   setBackdrop(false);
+  //   console.log("aaaaaaaaaaaa");
+  // };
 
   return (
     <BrowserRouter>
-     {/* {currentB && sizedBackdrop && (<Backdrop clicking={someOther}/>)} */}
-     {currentB && sizedBackdrop && <Modal appFn={someOther} appButton={buttonPrompt}/>} 
+      {/* {true && <Modal appFn={backdropOff} appButton={buttonPrompt}/>}  */}
+      {currState.visibleBackdrop && (
+        <Backdrop
+          onDispatch={dispatch}
+          modal={<Modal onDispatch={dispatch} />}
+        />
+      )}
       <Routes>
-        <Route path="/" element={<Home  appFn={callAppHandler}/>} />
+        <Route path="/" element={<Home onDispatch={dispatch} appFn={callAppHandler} />} />
         <Route path="/packages" element={<PackagesPage />} />
-        <Route path="/customers" element={<CustomersPage/>}/>
+        <Route path="/customers" element={<CustomersPage />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-

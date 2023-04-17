@@ -1,9 +1,18 @@
 import Navigation from "../components/Navigation.jsx";
 import Body from "./Body.jsx";
 import Footer from "../components/Footer.jsx";
-import React from "react";
+import MobileNav from "../components/mobile-nav/MobileNav.jsx";
+import React, {useState} from "react";
 
-const Home = ({appFn}) => {
+const Home = ({appFn, onDispatch}) => {
+
+  const [sideNav, setSideNav] = useState(false)
+
+  const sideNavSwitchHandler = () => {
+    setSideNav(val => {
+      return !val;
+    })
+  }
 
   const callHomeHandler = () => {
      appFn();
@@ -11,8 +20,9 @@ const Home = ({appFn}) => {
 
   return (
     <React.Fragment>
-      <Navigation />
-      <Body homeFn={callHomeHandler}/>
+      <Navigation homeSideNavFn={sideNavSwitchHandler}/>
+     {sideNav && <MobileNav/>}
+      <Body onDispatch={onDispatch} homeFn={callHomeHandler}/>
       <Footer/>
     </React.Fragment>
   );

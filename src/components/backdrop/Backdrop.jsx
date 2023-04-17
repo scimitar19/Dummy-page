@@ -1,12 +1,19 @@
 import styles from "./Backdrop.module.css";
 
-const Backdrop = ({modalFn}) => {
+const Backdrop = (props) => {
 
-    const backdropHandler = () => {
-        modalFn();
-    }
+    
+  const backdropHandler = (component) => {
+    props.onDispatch({type: "removeBackdrop", visibleBackdrop: false})
+    console.log("backdrop")
+  };
 
-    return  <div onClick={backdropHandler} className={styles.backdrop}></div>
-}
+  return (
+    <div>
+      {props.modal}
+      <div onClick={backdropHandler} className={styles.backdrop}></div>
+    </div>
+  );
+};
 
 export default Backdrop;
