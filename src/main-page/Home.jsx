@@ -20,7 +20,7 @@ const Home = ({appFn, onDispatch}) => {
 
   return (
     <React.Fragment>
-      <Navigation homeSideNavFn={sideNavSwitchHandler}/>
+      <Navigation onDispatch={onDispatch} homeSideNavFn={sideNavSwitchHandler}/>
      {sideNav && <MobileNav/>}
       <Body onDispatch={onDispatch} homeFn={callHomeHandler}/>
       <Footer/>

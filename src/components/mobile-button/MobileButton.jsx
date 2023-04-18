@@ -1,10 +1,10 @@
 import styles from "./MobileButton.module.css";
 
 
-const MobileButton = ({navFn}) => {
+const MobileButton = ({onDispatch}) => {
 
     const sideNavHandler = () => {
-        navFn();
+        onDispatch({type: "showSideNav"})
     }
 
    return (<button onClick={sideNavHandler} className={styles["toggle-button"]}>

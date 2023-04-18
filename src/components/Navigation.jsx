@@ -4,16 +4,16 @@ import Logo from "../images/uhost-icon.png";
 import MobileButton from "./mobile-button/MobileButton.jsx";
 import styles from "./Navigation.module.css";
 
-const Navigation = ({homeSideNavFn}) => {
+const Navigation = ({onDispatch}) => {
 
-  const navHandler = () => {
-    homeSideNavFn()
-  }
+  // const navHandler = () => {
+  //   homeSideNavFn()
+  // }
 
   return (
     <header className={styles["main-header"]}>
       <div>
-        <MobileButton navFn={navHandler}/>
+        <MobileButton onDispatch={onDispatch}/>
         <Link className={styles["main-header__brands"]} to="/"><img src={Logo} alt="Uhost Icon"/></Link>
       </div> 
       <nav className={styles["main-nav"]}>

@@ -1,16 +1,21 @@
 import styles from "./Backdrop.module.css";
 
+let component;
 const Backdrop = (props) => {
+  if (props.modal) {
+    component = props.modal;
+  } else {
+    component = props.mobileNav;
+  }
 
-    
-  const backdropHandler = (component) => {
-    props.onDispatch({type: "removeBackdrop", visibleBackdrop: false})
-    console.log("backdrop")
+  const backdropHandler = () => {
+    props.onDispatch({ type: "removeBackdrop", visibleBackdrop: false });
+    console.log("backdrop");
   };
 
   return (
     <div>
-      {props.modal}
+      {component}
       <div onClick={backdropHandler} className={styles.backdrop}></div>
     </div>
   );

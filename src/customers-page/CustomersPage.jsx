@@ -3,10 +3,10 @@ import Navigation from "../components/Navigation.jsx";
 import CustomersList from "./CustomersList.jsx";
 import Footer from "../components/Footer.jsx";
 
-const CustomersPage = () => {
+const CustomersPage = ({onDispatch}) => {
   return (
     <React.Fragment>
-      <Navigation />
+      <Navigation onDispatch={onDispatch}/>
       <CustomersList/>
       <Footer />
     </React.Fragment>

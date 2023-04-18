@@ -4,12 +4,12 @@ import Footer from "../components/Footer.jsx";
 import PackagePlans from "./PackagePlans.jsx";
 import styles from "./PackagesPage.module.css";
 
-const PackagesPage = () => {
+const PackagesPage = ({onDispatch}) => {
   return (
     <React.Fragment>
       <div className={styles.background}></div>
-      <Navigation />
-      <PackagePlans />
+      <Navigation onDispatch={onDispatch}/>
+      <PackagePlans onDispatch={onDispatch}/>
       <Footer />
     </React.Fragment>
   );
