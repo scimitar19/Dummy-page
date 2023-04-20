@@ -6,15 +6,11 @@ import styles from "./Navigation.module.css";
 
 const Navigation = ({onDispatch}) => {
 
-  // const navHandler = () => {
-  //   homeSideNavFn()
-  // }
-
   return (
     <header className={styles["main-header"]}>
       <div>
         <MobileButton onDispatch={onDispatch}/>
-        <Link className={styles["main-header__brands"]} to="/"><img src={Logo} alt="Uhost Icon"/></Link>
+        <a href="/" className={styles["main-header__brands"]}><img src={Logo} alt="Uhost Icon"/></a>
       </div> 
       <nav className={styles["main-nav"]}>
         <ul className={styles["main-nav__items"]}>

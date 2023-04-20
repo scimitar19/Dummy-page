@@ -1,4 +1,5 @@
 .toggle-button {
+    display: none;
     width: 3rem;
     background: transparent;
     border: none;
@@ -18,4 +19,10 @@
     background: black;
     display: block;
     margin: 0.6rem 0;
+  }
+
+  @media (max-width: 40rem) {
+      .toggle-button {
+        display: block;
+      }
   }

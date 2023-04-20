@@ -17,8 +17,7 @@
 }
 
 .key-feature__list li {
-  display: inline-block;
-  width: 30%;
+  width: 100%;
   vertical-align: top;
 }
 
@@ -40,5 +39,10 @@
 }
 
 @media (min-width: 40rem) {
-
+    .key-feature__list li {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+      max-width: 25rem;
+    }
 }
